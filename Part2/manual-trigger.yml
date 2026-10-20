@@ -1,0 +1,21 @@
+name: Manual Workflow Trigger
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Where should this run?
+        type: choice
+        options: [staging, production]
+        default: staging
+      verbose:
+        description: Print extra logs
+        type: boolean
+        default: false
+
+jobs:
+  greeting:
+    runs-on: windows-latest
+    steps:
+      - name: Display welcome message
+        run: echo "Hello member"
