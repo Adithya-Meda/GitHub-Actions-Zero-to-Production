@@ -1,0 +1,15 @@
+name: Using $GITHUB_OUTPUT
+
+on:
+ workflow_dispatch:
+
+jobs:
+  hello:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Step one
+      id: one
+      run: echo "name=AdithyaMeda" >> "$GITHUB_OUTPUT"
+
+    - name: Step two
+      run: echo "Hello ${{ steps.one.outputs.name }}"  
