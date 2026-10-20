@@ -41,7 +41,7 @@ This project is broken down into 5 sequential parts. Each folder inside this rep
 ## 🚀 How to Use This Repository
 
 1. **Fork this repository** to your own GitHub account to experiment with the configurations.
-2. **Follow along with the articles** linked in the table above to understand the architectural "why" behind the code patterns.
+2. **Follow along with the articles** to understand the architectural "why" behind the code patterns.
 3. **Copy-paste the snippets** from the respective `part/` folders into your own projects to accelerate your pipeline engineering.
 
 ---
