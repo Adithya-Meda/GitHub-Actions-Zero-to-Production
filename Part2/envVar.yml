@@ -1,0 +1,26 @@
+name: Environment Variables
+
+on:
+  workflow_dispatch:
+
+env:
+  DEPLOY_ENV: "production"                                         # Environment variable at workflow level 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      APP_PORT: "8080"                                             # Environment variable at job level 
+
+    steps:
+      - name: Configure Server Simulation
+        env: 
+          SERVER_REGION: "us-east-1"                               # Environment variable at step level 
+        run: |
+          echo "Configuring server in $SERVER_REGION..."
+          echo "SERVER_IP=127.0.0.1" >> $GITHUB_ENV         
+
+      - name: Verify Application Start
+        run: |
+          echo "Successfully connected to $SERVER_IP:$APP_PORT"
+          echo "Status: Active on $DEPLOY_ENV environment."
