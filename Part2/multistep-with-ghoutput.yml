@@ -1,4 +1,4 @@
-name: Using $GITHUB_OUTPUT
+name: Passing Data across steps with $GITHUB_OUTPUT
 
 on:
  workflow_dispatch:
