@@ -1,0 +1,20 @@
+name: Workflow Triggers
+
+on:
+ workflow_dispatch:      # manual trigger
+ 
+ push:
+   branches: [ main ]    # commit to main branch
+ 
+ issues:
+   types: [opened]       # when issue is opened
+
+ schedule:
+  - cron: '0 6 * * 1'    # scheduled run
+ 
+
+jobs:
+ sample_job:
+  runs-on: ubuntu-latest
+  steps:
+   - run: echo 'Hello World'
