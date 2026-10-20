@@ -1,0 +1,14 @@
+name: Passing Data across steps without $GITHUB_OUTPUT
+
+on:
+ workflow_dispatch:
+
+jobs:
+  varcheck:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Step one
+      run: name=AdithyaMeda
+
+    - name: Step two
+      run: echo "Hello $name"  
