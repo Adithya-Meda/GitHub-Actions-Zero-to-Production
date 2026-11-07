@@ -1,7 +1,20 @@
 name: Deploy to AWS ECR with Environment (using OIDC)
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target deployment environment'
+        required: true
+        type: choice
+        options:
+          - staging
+          - production
+      image_tag:
+        description: 'Docker image tag'
+        required: false
+        default: ''
+        type: string
 
 permissions:
   id-token: write   # Required to request the JWT for AWS OIDC authentication
