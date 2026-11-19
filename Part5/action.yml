@@ -1,0 +1,7 @@
+name: Set up the project
+description: Install the project's dependencies
+runs:
+  using: composite
+  steps:
+    - run: npm ci
+      shell: bash
