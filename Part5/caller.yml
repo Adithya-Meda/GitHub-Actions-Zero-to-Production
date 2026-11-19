@@ -13,5 +13,5 @@ jobs:
     runs-on: windows-latest
     needs: samplejob
     steps:
-     - name: Display the test
+     - name: Display the text
        run: echo 'Display this text post calling the reusable workflow'
