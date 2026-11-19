@@ -1,0 +1,17 @@
+name: Calling Reusable Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  samplejob:
+    uses: ./.github/workflows/calling.yml 
+    with:
+      node_version: '14'   
+  
+  newjob:
+    runs-on: windows-latest
+    needs: samplejob
+    steps:
+     - name: Display the test
+       run: echo 'Display this text post calling the reusable workflow'
