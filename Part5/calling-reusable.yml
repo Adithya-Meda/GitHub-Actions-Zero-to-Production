@@ -5,7 +5,7 @@ on:
 
 jobs:
   samplejob:
-    uses: ./.github/workflows/calling.yml 
+    uses: ./.github/workflows/reusable.yml 
     with:
       node_version: '14'   
   
